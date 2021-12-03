@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="528.0" prefHeight="445.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewUI.XML.Body.ShowUsers.ShowUsersController">
+   <top>
+      <Label text="Choose a user " textFill="#1473e1" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Nirmala UI" size="44.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="292.0" prefWidth="382.0">
+               <content>
+                  <FlowPane fx:id="flowPaneComponent" alignment="CENTER" columnHalignment="CENTER" hgap="5.0" prefHeight="165.0" prefWidth="244.0" prefWrapLength="100.0" vgap="5.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </FlowPane>
+   </center>
+</BorderPane>

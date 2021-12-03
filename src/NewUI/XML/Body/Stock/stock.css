@@ -1,0 +1,10 @@
+.stock  {
+    -fx-border-color: white;
+    -fx-background-color: dodgerblue;
+
+}
+
+.stock:hover{
+
+    -fx-background-color: darkBlue;
+}

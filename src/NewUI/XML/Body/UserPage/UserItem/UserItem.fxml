@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<TitledPane fx:id="titleLabel" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="205.0" text="untitled" textAlignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewUI.XML.Body.UserPage.UserItem.UserItemController">
+   <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="140.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="2.0" layoutY="-3.0" prefHeight="57.0" prefWidth="205.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6108374384236454" prefHeight="119.0" prefWidth="320.0">
+                           <items>
+                              <Label prefHeight="17.0" prefWidth="111.0" text="Symbol:" />
+                              <Label fx:id="symbolLabel" prefHeight="17.0" prefWidth="99.0" text="Label" />
+                           </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.29523809523809524" prefHeight="97.0" prefWidth="491.0">
+                           <items>
+                              <Label prefHeight="17.0" prefWidth="111.0" text="Quantity:" />
+                              <Label fx:id="quantityLabel" prefHeight="17.0" prefWidth="37.0" text="Label" />
+                           </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
+                           <items>
+                              <Label prefHeight="17.0" prefWidth="111.0" text="Current price:" />
+                              <Label fx:id="gateLabel" text="Label" />
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>

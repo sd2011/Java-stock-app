@@ -1,0 +1,140 @@
+
+/* Prevent iOS from adjusting text while changing orientation */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+
+.management-header{
+    height: 20%;
+    width:40%;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+}
+.management-body{
+    height: 80%;
+    width:100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+}
+
+
+
+.center{
+    display: flex;
+    flex-flow: column ;
+    align-content: center;
+    height: 80%;
+    width: 60%;
+    border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+}
+
+.pop-up{
+    height:0px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+        background-color: white;
+        box-shadow: 5px 5px 15px 5px rgba(0 ,0 ,0 ,0.23);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.pop-up-content{
+    height: 100%;
+    display: flex;
+    width: 90%;
+    flex-flow: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.addMoneyContainer{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    height: 70%;
+}
+.addMoneyContainer form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+}
+.pop-up-content button{
+    width: 15%;
+    display: flex;
+    align-self: flex-end;
+}
+
+.ok-button{
+    width: 15%;
+}
+
+.issue-form{
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.form-input{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right-side{
+    display: flex;
+    flex-flow: column;
+    height: 30%;
+    width: 10%;
+    border: 1px black solid;
+}
+
+
+.good-message{
+    color: green;
+}
+
+.err-message{
+    color: red;
+}
+
+.actions-container {
+    border: 1px solid #dddd;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:80%
+}
+
+.action-container{
+    height: 45%;
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+
+.action{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.action-attribute{
+   padding: 5px;
+}

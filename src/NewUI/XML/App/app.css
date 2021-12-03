@@ -1,0 +1,30 @@
+.button:hover{
+    -fx-background-color: darkblue;
+
+}
+
+.button:hover circle{
+    -fx-background-color: darkblue;
+
+}
+
+.button{
+   -fx-background-color: dodgerblue;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+
+.circle:hover{
+    -fx-background-color: darkblue;
+    -fx-fill: darkblue;
+}
+
+.circle{
+    -fx-fill: dodgerblue;
+    -fx-background-color: dodgerblue;
+    -fx-cursor: hand;
+}
+
+
+

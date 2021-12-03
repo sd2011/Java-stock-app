@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewUI.XML.Body.Info.InfoController">
+   <children>
+      <Pane prefHeight="424.0" prefWidth="313.0">
+         <children>
+            <VBox layoutX="1.0" layoutY="-5.0" prefHeight="421.0" prefWidth="313.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="313.0" style="-fx-spacing: 10; -fx-padding: 5; -fx-border-width: 0.5; -fx-border-color: gray;">
+                     <children>
+                        <Button fx:id="buyButton" mnemonicParsing="false" onAction="#setType" text="Buy orders" />
+                        <Button fx:id="sellButton" mnemonicParsing="false" onAction="#setType" text="Sell orders" />
+                        <Button fx:id="transactionsButton" mnemonicParsing="false" onAction="#setType" text="Transactions" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <Pane prefHeight="380.0" prefWidth="313.0">
+                     <children>
+                        <ScrollPane prefHeight="380.0" prefWidth="313.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="300.0">
+                                 <children>
+                                    <VBox prefHeight="363.0" prefWidth="301.0">
+                                       <children>
+                                          <Accordion fx:id="ordersComponent" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <Label fx:id="noOrders" alignment="CENTER" prefHeight="380.0" prefWidth="313.0" text="No orders of this type have been made" textFill="#1473e1" textOverrun="CLIP" wrapText="true">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane prefHeight="458.0" prefWidth="313.0">
+         <children>
+            <VBox layoutX="1.0" layoutY="-3.0" prefHeight="423.0" prefWidth="309.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="313.0" style="-fx-padding: 5; -fx-border-color: gray; -fx-border-width: 0.5;">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="84.0" text="Stock name:" />
+                        <TextField fx:id="StockToSearch" onKeyPressed="#keyPressed" onKeyReleased="#KeyReleasedAction" onMouseReleased="#getTextCart" prefHeight="25.0" prefWidth="122.0" style="-fx-highlight-fill: null;-fx-highlight-text-fill: null" />
+                     </children>
+                  </HBox>
+                  <ScrollPane focusTraversable="false" pickOnBounds="false" prefHeight="381.0" prefWidth="309.0" style="-fx-border-color: white; -fx-border-width: 0; -fx-border-radius: 0;">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="1.12" radius="0.0" width="0.24" />
+                     </effect>
+                     <content>
+                        <VBox fx:id="allStocksComponent" prefHeight="372.0" prefWidth="286.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</HBox>

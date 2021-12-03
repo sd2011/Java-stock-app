@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+<servlet>
+    <servlet-name>loginUser</servlet-name>
+    <servlet-class>Rizpa.Servlets.Login.loginServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>getNotifications</servlet-name>
+    <servlet-class>Rizpa.Servlets.CommonServlets.Notifications.getNotifications</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>deleteNotifications</servlet-name>
+    <servlet-class>Rizpa.Servlets.CommonServlets.Notifications.deleteNotifications</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>returnHome</servlet-name>
+    <servlet-class>Rizpa.Servlets.CommonServlets.ReturnHome.ReturnHome</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>getMassages</servlet-name>
+    <servlet-class>Rizpa.Servlets.CommonServlets.GetMassages.getMassages</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>sendText</servlet-name>
+    <servlet-class>Rizpa.Servlets.CommonServlets.SendText.sendTextServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>userList</servlet-name>
+    <servlet-class>Rizpa.Servlets.HomeServlets.UserList.userListServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>addFile</servlet-name>
+    <servlet-class>Rizpa.Servlets.HomeServlets.AddFile.addFileServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>stocksList</servlet-name>
+    <servlet-class>Rizpa.Servlets.HomeServlets.StocksList.stocksListServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>showStock</servlet-name>
+    <servlet-class>Rizpa.Servlets.HomeServlets.ShowStock.ShowStockServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>getBalance</servlet-name>
+    <servlet-class>Rizpa.Servlets.ManagementServlets.GetBalance.getBalanceServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>issueShare</servlet-name>
+    <servlet-class>Rizpa.Servlets.ManagementServlets.IssueShare.issueShareServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>loadMoney</servlet-name>
+    <servlet-class>Rizpa.Servlets.ManagementServlets.LoadMoney.loadMoneyServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>getUserActions</servlet-name>
+    <servlet-class>Rizpa.Servlets.ManagementServlets.GetUserActions.getUserActionsServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>getStock</servlet-name>
+    <servlet-class>Rizpa.Servlets.StockServlets.GetStock.getStockServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>getItemQuantity</servlet-name>
+    <servlet-class>Rizpa.Servlets.StockServlets.GetItemQuantity.getItemQuantityServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>makeOrder</servlet-name>
+    <servlet-class>Rizpa.Servlets.StockServlets.MakeOrder.makeOrderServlet</servlet-class>
+</servlet>
+<servlet>
+    <servlet-name>getOrders</servlet-name>
+    <servlet-class>Rizpa.Servlets.StockServlets.GetOrders.getOrdersServlet</servlet-class>
+</servlet>
+
+
+
+<servlet-mapping>
+    <servlet-name>loginUser</servlet-name>
+    <url-pattern>/index/login</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>userList</servlet-name>
+    <url-pattern>/user_list</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>stocksList</servlet-name>
+    <url-pattern>/stocks_list</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>getStock</servlet-name>
+    <url-pattern>/get_stock</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>getBalance</servlet-name>
+    <url-pattern>/get_balance</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>showStock</servlet-name>
+    <url-pattern>/show_stock</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>getItemQuantity</servlet-name>
+    <url-pattern>/get_item_quantity</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>getUserActions</servlet-name>
+    <url-pattern>/get_user_actions</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>getNotifications</servlet-name>
+    <url-pattern>/get_Notifications</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>deleteNotifications</servlet-name>
+    <url-pattern>/delete_notifications</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>getOrders</servlet-name>
+    <url-pattern>/get_orders</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>returnHome</servlet-name>
+    <url-pattern>/return_home</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>sendText</servlet-name>
+    <url-pattern>/send_text</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>getMassages</servlet-name>
+    <url-pattern>/get_massages</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>issueShare</servlet-name>
+    <url-pattern>/pages/home/issue_share</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>loadMoney</servlet-name>
+    <url-pattern>/pages/home/load_money</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>addFile</servlet-name>
+    <url-pattern>/pages/home/add_file</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>makeOrder</servlet-name>
+    <url-pattern>/pages/show_stock/make_order</url-pattern>
+</servlet-mapping>
+
+
+
+</web-app>

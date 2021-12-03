@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="CENTER" prefHeight="31.0" prefWidth="94.0" styleClass="user" stylesheets="@user.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewUI.XML.Body.ShowUsers.User.UserController">
+   <children>
+      <AnchorPane prefHeight="74.0" prefWidth="161.0">
+         <children>
+            <Label fx:id="nameLabel" alignment="CENTER" layoutX="-1.0" prefHeight="74.0" prefWidth="161.0" styleClass="name" text="Label" textAlignment="JUSTIFY" textOverrun="CLIP">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#changeToUserPage" opacity="0.0" prefHeight="74.0" prefWidth="161.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</FlowPane>

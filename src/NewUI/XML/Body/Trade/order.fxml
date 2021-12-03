@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewUI.XML.Body.Trade.OrderController">
+   <children>
+      <VBox prefHeight="408.0" prefWidth="260.0" style="-fx-spacing: 0;">
+         <children>
+            <HBox prefHeight="48.0" prefWidth="260.0">
+               <children>
+                  <HBox prefHeight="49.0" prefWidth="260.0">
+                     <children>
+                        <Label prefHeight="41.0" prefWidth="87.0" text="Order type :" />
+                        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="115.0" style="-fx-spacing: 20;">
+                           <children>
+                              <Button fx:id="mktButton" mnemonicParsing="false" onAction="#setOrderType" text="MKT" textFill="#030303" />
+                              <Button fx:id="lmtButton" mnemonicParsing="false" onAction="#setOrderType" style="-fx-line-spacing: 20;" text="LMT" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="260.0">
+               <children>
+                  <Label prefHeight="82.0" prefWidth="112.0" text="Stock :" />
+                  <Label fx:id="chosenStock" prefHeight="79.0" prefWidth="152.0" text="stk" textFill="#1473e1">
+                     <font>
+                        <Font name="Trebuchet MS Italic" size="20.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="260.0">
+               <children>
+                  <Label prefHeight="80.0" prefWidth="77.0" text="Amount :" />
+                  <TextField fx:id="amountTextField" prefHeight="25.0" prefWidth="114.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="260.0">
+               <children>
+                  <Label prefHeight="164.0" prefWidth="76.0" text="Limit :" />
+                  <TextField fx:id="limitTextField" prefHeight="25.0" prefWidth="114.0" />
+               </children>
+            </HBox>
+            <FlowPane alignment="CENTER" prefHeight="77.0" prefWidth="177.0" prefWrapLength="50.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#makeOrder" prefHeight="37.0" prefWidth="90.0" styleClass="orderButton" stylesheets="@tradeCss.css" text="Order" textFill="WHITE">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="errorLabel" alignment="CENTER" prefHeight="33.0" prefWidth="199.0" text="error" textFill="RED" />
+               </children>
+            </FlowPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

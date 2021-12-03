@@ -1,0 +1,22 @@
+.user{
+    -fx-background-color: dodgerblue;
+    -fx-cursor: hand;
+}
+
+.user:hover{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-background-radius: 0.2;
+}
+.user:hover .name{
+    -fx-text-fill: dodgerblue;
+}
+
+
+.name {
+    -fx-text-fill: white;
+}
+
+.name :hover{
+    -fx-text-fill: dodgerblue;
+}

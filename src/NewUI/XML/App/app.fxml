@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="grind" minHeight="300.0" minWidth="342.0" prefHeight="416.0" prefWidth="342.0" stylesheets="@app.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewUI.XML.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="389.0" minHeight="7.0" prefHeight="39.0" />
+        <RowConstraints minHeight="0.0" prefHeight="376.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="363.0" prefWidth="625.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <content>
+            <FlowPane alignment="CENTER" prefWrapLength="100.0">
+                <children>
+                    <fx:include fx:id="bodyComponent" source="../Body/body.fxml" />
+                </children>
+            </FlowPane>
+        </content>
+    </ScrollPane>
+    <fx:include fx:id="headerComponent" minWidth="343.0" source="../Header/header.fxml" />
+</GridPane>

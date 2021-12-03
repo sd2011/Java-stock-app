@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewUI.XML.Body.Trade.TradeController">
+    <children>
+        <Pane fx:id="bigButtonsLayer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <VBox prefHeight="400.0" prefWidth="600.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="244.0" prefWidth="606.0" text="Are you buying or selling?" textFill="#1473e1">
+                            <font>
+                                <Font size="40.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-spacing: 60;">
+                            <children>
+                                <Button fx:id="bigBuyButton" mnemonicParsing="false" onAction="#toggleBuyOrSell" prefHeight="147.0" prefWidth="208.0" style="-fx-background-color: green;" text="Buy" textFill="WHITE">
+                                    <font>
+                                        <Font size="63.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                                <Button fx:id="bigSellButton" mnemonicParsing="false" onAction="#toggleBuyOrSell" prefHeight="149.0" prefWidth="222.0" style="-fx-background-color: dd1c1a; -fx-padding: 10;" text="Sell" textFill="WHITE">
+                                    <font>
+                                        <Font size="63.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                            </children>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+        <GridPane fx:id="tradeLayer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="459.0" minWidth="10.0" prefWidth="279.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="454.0" minWidth="10.0" prefWidth="321.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="337.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="324.0" GridPane.columnIndex="1">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="324.0" style="-fx-spacing: 10; -fx-padding: 10;">
+                            <children>
+                                <Button fx:id="buyButton" mnemonicParsing="false" onAction="#toggleBuyOrSell" prefHeight="27.0" prefWidth="61.0" style="-fx-background-color: green;" text="Buy" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Button>
+                                <Button fx:id="sellButton" mnemonicParsing="false" onAction="#toggleBuyOrSell" prefHeight="27.0" prefWidth="59.0" style="-fx-background-color: dd1c1a;" text="Sell" textFill="WHITE">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </HBox>
+                    </children>
+                </Pane>
+                <Pane>
+                    <children>
+                        <fx:include fx:id="orderComponent" layoutY="50" prefHeight="200.0" prefWidth="200.0" source="order.fxml" GridPane.rowIndex="1" />
+                        <Label fx:id="nameLabel" alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="61.0" prefWidth="279.0" text="name" textFill="#1473e1">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-width: 0.5; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="319.0">
+                            <children>
+                                <Label prefHeight="45.0" prefWidth="84.0" text="Stock name:" />
+                                <TextField fx:id="StockToSearch" onKeyPressed="#keyPressed" onKeyReleased="#KeyReleasedAction" onMouseReleased="#getTextCart" prefHeight="25.0" prefWidth="122.0" style="-fx-highlight-fill: null;-fx-highlight-text-fill: null" />
+                            </children>
+                        </HBox>
+                        <ScrollPane pickOnBounds="false" prefHeight="290.0" prefWidth="319.0" style="-fx-border-color: white; -fx-border-width: 0; -fx-border-radius: 0;">
+                            <effect>
+                                <DropShadow blurType="ONE_PASS_BOX" height="1.12" radius="0.0" width="0.24" />
+                            </effect>
+                            <content>
+                                <VBox fx:id="allStocksComponent" prefHeight="292.0" prefWidth="303.0" />
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+        <Pane fx:id="infoLayer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0">
+            <children>
+                <VBox layoutY="-2.0" prefHeight="431.0" prefWidth="600.0">
+                    <children>
+                        <Label fx:id="infoLabel" alignment="CENTER" prefHeight="138.0" prefWidth="903.0" text="Label" textFill="#1473e1" wrapText="true">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                        <Pane prefHeight="294.0" prefWidth="600.0">
+                            <children>
+                                <Pane layoutX="200.0" layoutY="47.0"  prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Pane onMouseClicked="#toggleInfo">
+                                            <Circle fx:id="returnCircle"  fill="DODGERBLUE" layoutX="101.0" layoutY="99.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                                            <Label fx:id="returnLabel" alignment="CENTER" ellipsisString="" layoutY="-3.0" prefHeight="209.0" prefWidth="200.0" text="Click here to make an other order" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                                                <font>
+                                                    <Font size="26.0" />
+                                                </font>
+                                            </Label>
+                                        </Pane>
+                                        <Button fx:id="noButton" onAction="#agreeAction" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="72.0" text="No">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="yesButton" onAction="#agreeAction" layoutX="114.0" layoutY="79.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="72.0" text="Yes!">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+
+    </children>
+</StackPane>
